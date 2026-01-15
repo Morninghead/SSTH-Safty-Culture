@@ -54,7 +54,7 @@ class QRScannerManager {
             // Try fallback
             try {
                 await this.scanner?.start(
-                    { facingMode: "user" },
+                    { facingMode: "environment" },
                     { fps: config.fps, qrbox: { width: config.qrbox, height: config.qrbox } },
                     onSuccess,
                     () => { }
@@ -104,7 +104,13 @@ export default function Scanner({
             .then((devices) => {
                 if (devices && devices.length) {
                     setCameras(devices);
-                    setSelectedCameraId(devices[0].id);
+                    // Try to find back camera
+                    const backCam = devices.find(device =>
+                        device.label.toLowerCase().includes('back') ||
+                        device.label.toLowerCase().includes('environ') ||
+                        device.label.toLowerCase().includes('rear')
+                    );
+                    setSelectedCameraId(backCam ? backCam.id : devices[0].id);
                 } else {
                     setStatus('error');
                     setErrorMessage('No cameras found');
