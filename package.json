@@ -1,0 +1,30 @@
+{
+  "name": "safety-patrol",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "@supabase/supabase-js": "^2.90.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.0.6",
+    "@types/qrcode": "^1.5.6",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.23",
+    "html5-qrcode": "^2.3.8",
+    "lucide-react": "^0.562.0",
+    "netlify-cli": "^23.13.3",
+    "next": "^16.1.1",
+    "next-themes": "^0.4.6",
+    "postcss": "^8.5.6",
+    "qrcode": "^1.5.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
+}

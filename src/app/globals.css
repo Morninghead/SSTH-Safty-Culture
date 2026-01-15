@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+
+@layer base {
+  :root {
+    /* Base - Zinc 50 (Very soft white, easy on eyes) */
+    --background: 240 5% 98%;
+    --foreground: 240 10% 3.9%;
+
+    /* Card - Pure White with subtle contrast */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary - Zinc 900 (Soft black) */
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    /* Secondary - Zinc 100/200 blend */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    /* Muted - Soft gray for secondary text */
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+
+    /* Accent - Hover states */
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    /* Destructive - Soft Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Success - Calm Emerald */
+    --success: 150 60% 40%;
+    --success-foreground: 150 90% 98%;
+
+    /* Warning - Warm Amber */
+    --warning: 35 90% 50%;
+    --warning-foreground: 35 90% 10%;
+
+    /* Border - Subtle definition */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5% 65%;
+
+    --radius: 0.75rem;
+  }
+
+  /* Dark Mode - Class-based for toggling */
+  .dark {
+    /* Background - Zinc 950/900 mix */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    /* Card - Zinc 900 (Slightly lighter than bg) */
+    --card: 240 6% 6%;
+    --card-foreground: 0 0% 98%;
+
+    /* Popover */
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - White text on actions */
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    /* Secondary - Zinc 800 */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Muted - Zinc 800/700 */
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    /* Accent - Hover */
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Destructive */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Success */
+    --success: 150 50% 35%;
+    --success-foreground: 150 70% 90%;
+
+    /* Warning */
+    --warning: 35 85% 50%;
+    --warning-foreground: 35 90% 10%;
+
+    /* Border - Zinc 800 (Subtle) */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
