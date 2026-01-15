@@ -18,7 +18,11 @@ export default function AuthCallbackPage() {
             if (code) {
                 await supabase.auth.exchangeCodeForSession(code)
             }
-            router.push('/dashboard')
+            if (window.innerWidth < 768) {
+                router.push('/patrol')
+            } else {
+                router.push('/dashboard')
+            }
         }
         handleCallback()
     }, [router, supabase])
